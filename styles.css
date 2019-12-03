@@ -13,3 +13,21 @@ styles.css
 .body {
 	background: lightgrey;
 }
+
+.container {
+    width: 90%;
+    height: 200px;
+    border: 1px solid black;
+    margin-bottom: 10px;
+    text-align: center;
+    background-color: pink;
+}
+
+.boxes {
+    width: 25%;
+    height: 180px;
+	border-style: double;
+	margin: 8px 50px;
+    display: inline-block;
+    
+}
