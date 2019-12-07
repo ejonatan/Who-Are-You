@@ -20,15 +20,22 @@ body {
 	margin: 0px 0px 50px 0px;
 	padding: 10px;
 	font-size: 30px;
-	font-color: #ff5bad;
 	font-weight: bold;
+	vertical-align: middle;
+}
+
+.maincontain {
+	width: 90%;
+	margin: auto;
 }
 
 .button {
 	float: right;
-	background-color: pink;
+	padding: 2px;
+	width: 100px;
+	text-align: center;
+	background-color: #ff80c0;
 	border-radius: 5px;
-	border: solid black 1px;
 	margin: 5px;
 	font-color: white;
 	font-weight: bold;
@@ -38,20 +45,17 @@ body {
 .main {
 	background-color: #ff5bad;
 	border-radius: 10px;
-	font-size: 25px;
+	font-size: 20px;
 	border: dashed 3px white;
 }
 
 .games {
 	height: 100px;
-	width: 90%;
 	margin: auto;
 }
 
-.container {
-	margin: auto;
-	width: 90%;
-	padding-top: 50px;
+.spacer {
+	height: 50px;
 }
 
 .leaderboard {
