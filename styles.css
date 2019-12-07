@@ -24,7 +24,7 @@ body {
 	vertical-align: middle;
 	overflow: hidden;
 	border: solid white;
-	border-width: 0px 0px 3px 0px;
+	border-width: 0px 0px 2px 0px;
 }
 
 .header p {
@@ -158,18 +158,14 @@ button {
 	position: fixed; 
 	left: 40%;
 	top: 43%;	
-}
-
-input {
 	width: 20%;
 	font-size: 40px; 
 	color: white;
 	border: none;
 	text-align: center;
 	background-color: rgba(172, 6, 80, 0.75);
-	
-	
 }
+
 .clickgame p {
 	-webkit-user-select: none; /* Safari */        
 	-moz-user-select: none; /* Firefox */
