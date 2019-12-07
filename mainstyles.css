@@ -8,8 +8,8 @@ styles.css
 
 */
 
-* {
-	background-color: grey;
+.body {
+	background-color: lightgrey;
 }
 
 .container {
