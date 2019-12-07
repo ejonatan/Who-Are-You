@@ -17,32 +17,33 @@
 
 <div class="maincontain">
 
+<form action="profile.php" method="post">
 	<div class="main login_signup_header">
 		Sign Up
 	</div>
 	<div class="spacer"></div>
 	<div class="main signup">
-	User<br>
-	<input type="text" id="user">
+	Username<br>
+	<input type="text" id="user" name="username" required>
 	<br>
-	Pass<br>
-	<input type="text" id="pass">	
+	Password<br>
+	<input type="text" id="pass" name="password" required>	
 	<br>
-	FirstName<br>
+	First Name<br>
 	<input type="text" id="firstName" name="firstName"
 		pattern="[A-Z a-z]*" required
 		autocomplete='given-name'>
 	<br>
-	LastName<br>
+	Last Name<br>
 	<input type="text" id="firstName" name="lastName"
 		pattern="[A-Z a-z]*" required
 		autocomplete='given-name'>
 	<br>
 	Age<br>
-	<input type="text" id="age">
-	<button onclick="window.location.href = 'profile.html'">ok</button>
+	<input type="text" id="age" name="age" pattern="[0-9]" required>
+	<input type="submit" value="OK">
 	</div>
-	
+</form>
 </div>
 
 </body>
