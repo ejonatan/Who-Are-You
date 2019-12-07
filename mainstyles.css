@@ -11,16 +11,19 @@ styles.css
 body {
 	margin: 0px;
 	padding: 0px;
-	background-image: linear-gradient(to bottom right, pink, cyan);
-	font-family: "Comic Sans MS";
+	background-image: url("images/bg.jpg");
+	background-attachment:fixed;
+	background-size: cover;
+	font-family: "Courier New";
 }
 
 .header {
-	background-color: white;
+	background-color: rgba(172, 6, 80, 0.75);
 	margin: 0px 0px 50px 0px;
 	padding: 10px;
-	font-size: 30px;
+	color: white;
 	font-weight: bold;
+	font-size: 30px;
 	vertical-align: middle;
 }
 
@@ -37,15 +40,16 @@ body {
 	background-color: #ff80c0;
 	border-radius: 5px;
 	margin: 5px;
-	font-color: white;
+	color: black;
 	font-weight: bold;
 	font-size: 20px;
 }
 
 .main {
-	background-color: #ff5bad;
+	background-color: rgba(172, 6, 80, 0.75);
 	border-radius: 10px;
 	font-size: 20px;
+	color: white;
 	border: dashed 3px white;
 }
 
