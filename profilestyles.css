@@ -1,0 +1,48 @@
+/*
+Authors: 	Emily Jonatan, Pranav Talwar	 	
+Class:	 	CSC 337, Professor Rick Mercer
+		 	
+Who Are You? - Final Project
+styles.css
+	Provides the CSS styling for main.html, ...
+
+*/
+
+* {
+	background-color: grey;
+}
+
+.container {
+    width: 90%;
+    height: 200px;
+    border: 1px solid black;
+    margin-bottom: 10px;
+    text-align: center;
+    background-color: pink;
+}
+
+.boxes {
+    width: 25%;
+    height: 180px;
+	border-style: double;
+	margin: 8px 50px;
+    display: inline-block;
+    
+}
+
+.header {
+	background-color: white;
+	margin: 0px;
+	padding: 0px;
+	border: solid black 1px;
+	
+}
+
+.button {
+	float: right;
+	background-color: red;
+	border-radius: 10px;
+	border: solid black 1px;
+	font-color: white;
+	font-weight: bold;
+}
