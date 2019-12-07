@@ -83,7 +83,6 @@ button {
 	display: inline-block;
 }
 
-
 .login_signup_header {
 	text-align: center;
 	height: 70px;
@@ -92,7 +91,7 @@ button {
 }
 
 .login_signup {
-	height: 400px;
+	height: 160px;
 	width: 400px;
 	margin: auto;
 }
