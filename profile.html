@@ -2,35 +2,46 @@
 <html>
 <head>
 <meta charset="utf-8">
-<link href="styles.css" rel="stylesheet">  
-<title>Who Are You? - Homepage</title>
+<link href="styles.css" rel="stylesheet">
+<title>Who Are You? - Your Profile</title>
 </head>
 <body>
 
-<div class="header">
+	<script>
+		function edit() {
+			var element = document.getElementById("name");
+			element.classList.add("destroy");
+			var editBox = document.getElementById("inp");
+			element.classList.remove("destroy");
+		}
 
-	<p>Who Are You?</p>
-	
-	<button onclick="window.location.href = 'home.html'">Home</button>
+		function commit() {
+			var inp = document.getElementById("inp").value;
+			var element = document.getElementById("name");
+			element.classList.remove("destroy");
+			var editBox = document.getElementById("inp");
+			element.classList.add("destroy");
+		}
+	</script>
 
-</div>
+	<div class="header">
 
-<div class="maincontain">
-	<div class="main profile">
-		<br>
-		<img src="images/profilepic.png" width="100px" height="100px">
-		<br>
-		Name: <input type="text">
-		<br>
-		Age: <input type="text">
-		<br>
-		Signup Date: 
+		<p>Who Are You?</p>
+
+		<button onclick="window.location.href = 'home.html'">Home</button>
+
 	</div>
-	<div class="main stats">
-	<br>
-	Ranks & Stats <hr>
+
+	<div class="maincontain">
+		<div class="main profile">
+			<br> <img src="images/profilepic.png" width="100px"
+				height="100px"> <br> Name: <br> Age: <br>Signup Date:
+		</div>
+		<div class="main stats">
+			<br> Ranks & Stats
+			<hr>
+		</div>
 	</div>
-</div>
 
 </body>
 </html>
