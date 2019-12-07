@@ -8,41 +8,66 @@ styles.css
 
 */
 
-.body {
-	background-color: lightgrey;
-}
-
-.container {
-    width: 90%;
-    height: 200px;
-    border: 1px solid black;
-    margin-bottom: 10px;
-    text-align: center;
-    background-color: pink;
-}
-
-.boxes {
-    width: 25%;
-    height: 180px;
-	border-style: double;
-	margin: 8px 50px;
-    display: inline-block;
-    
+body {
+	margin: 0px;
+	padding: 0px;
+	background-color: #ff80c0;
+	font-family: "Comic Sans MS";
 }
 
 .header {
 	background-color: white;
-	margin: 0px;
-	padding: 0px;
-	border: solid black 1px;
-	
+	margin: 0px 0px 50px 0px;
+	padding: 10px;
+	font-size: 30px;
+	font-color: #ff5bad;
+	font-weight: bold;
 }
 
 .button {
 	float: right;
-	background-color: red;
-	border-radius: 10px;
+	background-color: pink;
+	border-radius: 5px;
 	border: solid black 1px;
+	margin: 5px;
 	font-color: white;
 	font-weight: bold;
+	font-size: 20px;
 }
+
+.main {
+	background-color: #ff5bad;
+	border-radius: 10px;
+	font-size: 25px;
+	border: dashed 3px white;
+}
+
+.games {
+	height: 100px;
+	width: 90%;
+	margin: auto;
+}
+
+.container {
+	margin: auto;
+	width: 90%;
+	padding-top: 50px;
+}
+
+.leaderboard {
+	height: 400px;
+	width: 47%;
+	float: left;
+	display: inline-block;
+}
+
+.about {
+	height: 400px;
+	width: 47%;
+	float: right;
+	display: inline-block;
+}
+
+
+
+
