@@ -83,7 +83,8 @@ body {
 
 
 .login_signup_header {
-	height: 100px;
+	text-align: center;
+	height: 70px;
 	width: 400px;
 	margin: auto;
 }
@@ -111,6 +112,7 @@ body {
 }
 
 .about {
+	text-align: center;
 	height: 400px;
 	width: 47%;
 	float: right;
