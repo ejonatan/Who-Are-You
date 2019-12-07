@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <link href="styles.css" rel="stylesheet">
-<title>Who Are You? - Homepage</title>
+<title>Who Are You? - Typing Game</title>
 </head>
 <body>
 
@@ -14,17 +14,26 @@
 
 			countDiv = document.getElementById("countdown");
 			countDiv.classList.remove("destroy");
-
+			
+/* 			typeDiv = document.getElementById("type");
+			typeDiv.classList.remove("destroy"); */
+			
 			timer();
 
 		}
-
+		function cleanFile() {
+			
+		}
+		
+		
 		function timer() {
 			countDiv = document.getElementById("countdown");
-			var timeleft = 9;
+			var timeleft = 60;
+			typeDiv = document.getElementById("type");
+			typeDiv.classList.remove("destroy");
 			var downloadTimer = setInterval( function() {
-				countDiv.innerHTML = "<p>0:0" + timeleft + "</p>";
 				timeleft -= 1;
+				countDiv.innerHTML = "<p>" + timeleft + "</p>";
 				if (timeleft < 0) {
 					clearInterval(downloadTimer);
 					countDiv.innerHTML = "Finished"
@@ -43,12 +52,20 @@
 
 	<div class="maincontain">
 
-		<div class="main" id="prompt">
-			you ready?
+		<div class="typingdisc" id="prompt">
+			Typing Test
+			<hr>
+			In this game, random words will pop up from the 
+			English Dictionary. You have a minute to type 
+			as many words as you can, correctly, and will be 
+			given a score based on how many you get right. 
+			Ready? 
 			<button onclick="startGame();">Start</button>
 		</div>
-
-		<div class="clickgame destroy" id="countdown"></div>
+		<div class="clickgame destroy" id="countdown">
+		</div>
+		<input class="inputdiv destroy" type= "text" id="type"/>
+		
 
 	</div>
 
