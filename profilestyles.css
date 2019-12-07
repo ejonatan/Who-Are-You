@@ -8,26 +8,30 @@ styles.css
 
 */
 
-* {
-	background-color: grey;
-}
-
 .container {
     width: 90%;
-    height: 200px;
+    height: 500px;
     border: 1px solid black;
     margin-bottom: 10px;
     text-align: center;
-    background-color: pink;
+    background-image: linear-gradient(cyan, pink);
+}
+
+label{
+    display: inline-block;
+    float: left;
+    clear: left;
+    width: 250px;
+    text-align: center;
 }
 
 .boxes {
-    width: 25%;
-    height: 180px;
+    width: 35%;
+    height: 380px;
 	border-style: double;
-	margin: 8px 50px;
+	margin: 10px 50px;
     display: inline-block;
-    
+    background-image: linear-gradient(white, white);
 }
 
 .header {
