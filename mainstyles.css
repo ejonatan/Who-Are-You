@@ -11,7 +11,7 @@ styles.css
 body {
 	margin: 0px;
 	padding: 0px;
-	background-color: #ff80c0;
+  	background-image: linear-gradient(to bottom right, pink, cyan);
 	font-family: "Comic Sans MS";
 }
 
@@ -58,6 +58,21 @@ body {
 	height: 400px;
 	width: 47%;
 	float: left;
+	display: inline-block;
+}
+
+.profile {
+	text-align: center;
+	height: 400px;
+	width: 47%;
+	float: left;
+	display: inline-block;
+}
+
+.stats {
+	height: 400px;
+	width: 47%;
+	float: right;
 	display: inline-block;
 }
 
