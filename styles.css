@@ -42,6 +42,19 @@ body {
 	margin: auto;
 }
 
+.buttonleft {
+	float: left; 
+	width: 500px; 
+	height: 50px;
+}
+
+.buttonright {
+	float: right; 
+	width: 500px; 
+	height: 50px;
+}
+
+
 button {
 	font-family: "Courier New";
 	border: none;
@@ -112,8 +125,14 @@ button {
 	margin: auto;
 }
 
-.login_signup {
+.login {
 	height: 160px;
+	width: 400px;
+	margin: auto;
+}
+
+.signup {
+	height: 360px;
 	width: 400px;
 	margin: auto;
 }
