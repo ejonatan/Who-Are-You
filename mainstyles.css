@@ -40,7 +40,9 @@ body {
 	margin: auto;
 }
 
-.button {
+button {
+	font-family: "Courier New";
+	border: none;
 	float: right;
 	display: inline;
 	width: 100px;
