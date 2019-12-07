@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<link href="mainstyles.css" rel="stylesheet">
+<title>Who Are You? - Homepage</title>
+</head>
+<body>
+
+	<script>
+		function startGame() {
+			promptDiv = document.getElementById("prompt");
+			promptDiv.classList.add("destroy");
+
+			countDiv = document.getElementById("countdown");
+			countDiv.classList.remove("destroy");
+
+			timer();
+
+		}
+
+		function timer() {
+			countDiv = document.getElementById("countdown");
+			var timeleft = 9;
+			var downloadTimer = setInterval( function() {
+				countDiv.innerHTML = "<p>0:0" + timeleft + "</p>";
+				timeleft -= 1;
+				if (timeleft < 0) {
+					clearInterval(downloadTimer);
+					countDiv.innerHTML = "Finished"
+				}
+			}, 1000);
+		}
+	</script>
+
+	<div class="header">
+
+		<p>Who Are You?</p>
+
+		<button onclick="window.location.href = 'main.html'">Home</button>
+
+	</div>
+
+	<div class="maincontain">
+
+		<div class="main" id="prompt">
+			u ready?
+			<button onclick="startGame();">Start</button>
+		</div>
+
+		<div class="clickgame destroy" id="countdown"></div>
+
+	</div>
+
+</body>
+</html>
