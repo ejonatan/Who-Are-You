@@ -24,7 +24,7 @@ body {
 	vertical-align: middle;
 	overflow: hidden;
 	border: solid white;
-	border-width: 0px 0px 3px 0px;
+	border-width: 0px 0px 2px 0px;
 }
 
 .header p {
@@ -43,15 +43,19 @@ body {
 }
 
 .buttonleft {
-	float: left; 
-	width: 500px; 
+	text-align: center;
 	height: 50px;
+	width: 47%;
+	float: left;
+	display: inline-block;
 }
 
 .buttonright {
-	float: right; 
-	width: 500px; 
+	text-align: center;
 	height: 50px;
+	width: 47%;
+	float: right;
+	display: inline-block;
 }
 
 .buttontype {
