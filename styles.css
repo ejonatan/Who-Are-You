@@ -54,6 +54,20 @@ body {
 	height: 50px;
 }
 
+.buttontype {
+	font-family: "Courier New";
+	border: none;
+	display: inline;
+	float: right;
+	width: 100px;
+	text-align: center;
+	background-color: #ff80c0;
+	border-radius: 5px;
+	margin: 5px;
+	color: black;
+	font-weight: bold;
+	font-size: 20px;
+}
 
 button {
 	font-family: "Courier New";
