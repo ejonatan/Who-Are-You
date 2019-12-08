@@ -17,6 +17,10 @@ body {
 	font-family: "Courier New";
 }
 
+a {
+	color: hotpink;
+}
+
 .header {
 	background-color: rgba(172, 6, 80, 0.75);
 	margin: 0px 0px 50px 0px;
@@ -62,12 +66,11 @@ body {
 	font-family: "Courier New";
 	border: none;
 	display: inline;
-	float: right;
 	width: 100px;
 	text-align: center;
 	background-color: #ff80c0;
 	border-radius: 5px;
-	margin: 5px;
+	margin: 20px 0px 0px 40px;
 	color: black;
 	font-weight: bold;
 	font-size: 20px;
@@ -138,19 +141,12 @@ button {
 
 .login_signup_header {
 	text-align: center;
-	height: 70px;
 	width: 400px;
 	margin: auto;
 }
 
-.login {
-	height: 160px;
-	width: 400px;
-	margin: auto;
-}
-
-.signup {
-	height: 330px;
+.signup_login {
+	padding: 50px 100px;
 	width: 400px;
 	margin: auto;
 }
