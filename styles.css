@@ -176,7 +176,13 @@ button {
 .inputdiv {
 	position: fixed; 
 	left: 40%;
-	top: 43%;	
+	top: 43%;
+	width: 20%;
+	font-size: 40px; 
+	color: white;
+	border: none;
+	text-align: center;
+	background-color: rgba(172, 6, 80, 0.75);	
 }
 
 .clickgame p {
