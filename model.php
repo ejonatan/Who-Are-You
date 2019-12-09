@@ -1,6 +1,6 @@
 <!--  Authors: Emily Jonatan
                Pranav Talwar
-      File: mmodel.php
+      File: model.php
  -->
 
 <?php
@@ -38,13 +38,6 @@ class DatabaseAdaptor
         $statement->execute();
         return $statement->fetchAll(PDO::FETCH_ASSOC);
     }
-
-//     public function getRoles($input)
-//     {
-//         $statement = $this->DB->prepare("SELECT * FROM Roles WHERE role LIKE '%" . $input . "%'");
-//         $statement->execute();
-//         return $statement->fetchAll(PDO::FETCH_ASSOC);
-//     }
     
     public function getRoles($first_name, $last_name) {
         $statement = $this->DB->prepare("SELECT Actors.first_name, Actors.last_name, Roles.role FROM Actors " .
@@ -55,9 +48,5 @@ class DatabaseAdaptor
         return $statement->fetchAll(PDO::FETCH_ASSOC);
     }
 }
-
-$theDBA = new DatabaseAdaptor ();
-$arr = $theDBA->getRoles ('Kevin', 'Bacon');
-print_r ($arr);
 
 ?>
