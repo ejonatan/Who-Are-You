@@ -14,7 +14,7 @@ session_start();
 
 		<p>Who Are You?</p>
 
-		<button onclick="window.location.href = 'home.html'">Home</button>
+		<button onclick="window.location.href = 'home.php'">Home</button>
 
 	</div>
 
@@ -32,6 +32,10 @@ session_start();
 		<div class="main stats">
 			<br> Ranks & Stats
 			<hr>
+			<?php 
+			echo "<br>Click Highscore: " . $_SESSION['clickscore'];
+			echo "<br>Type Highscore: " . $_SESSION['typescore'];
+			?>
 		</div>
 	</div>
 
