@@ -1,6 +1,12 @@
 <?php
 session_start();
 ?>
+
+<!--  Authors: Emily Jonatan
+			   Pranav Talwar
+      File: home.php
+ -->
+ 
 <!DOCTYPE html>
 <html>
 <head>

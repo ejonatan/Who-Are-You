@@ -1,3 +1,12 @@
+<?php
+session_start();
+?>
+
+<!--  Authors: Emily Jonatan
+			   Pranav Talwar
+      File: signup.php
+ -->
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -7,15 +16,40 @@
 </head>
 <body>
 
-<?php
-session_start();
-?>
+<script>
+
+function searchDatabase() {
+	var username = document.getElementById("user").value;
+	document.getElementById("user").value = "";
+	
+
+	var password = document.getElementById("pass").value;
+	document.getElementById("pass").value = "";
+
+	var ajax = new XMLHttpRequest();
+
+	// Send query parameter to controller.php
+	ajax.open("GET", "controller.php?username=" + username + "&password=" + password, true);
+	ajax.send();
+
+	// Execute when server responds
+	ajax.onreadystatechange = function() {
+		if (ajax.readyState == 4 && ajax.status == 200) {
+			var resultsDiv = document.getElementById("results");
+								
+			window.location.href = 'profile.php';
+			resultsDiv.innerHTML = ajax.responseText;
+		}
+	};
+}
+
+</script>
 
 	<div class="header">
 
 		<p>Dexterity Test</p>
 
-		<button onclick="window.location.href = 'home.html'">Home</button>
+		<button onclick="window.location.href = 'home.php'">Home</button>
 
 	</div>
 

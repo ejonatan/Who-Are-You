@@ -29,10 +29,7 @@
 			// Execute when server responds
 			ajax.onreadystatechange = function() {
 				if (ajax.readyState == 4 && ajax.status == 200) {
-					var resultsDiv = document.getElementById("results");
-										
 					window.location.href = 'profile.php';
-					resultsDiv.innerHTML = ajax.responseText;
 				}
 			};
 		}
