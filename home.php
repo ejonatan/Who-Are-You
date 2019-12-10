@@ -50,16 +50,33 @@ function logOut() {
 		</div>
 		<div class="spacer"></div>
 		<div class="main leaderboard">
-			LEADERBOARD
-			<hr>
+			LEADERBOARD<br><br>
+			<table style="width:100%">
+				<tr>
+				    <th>Username</th> 
+				    <th>Typing Score</th>
+				    
+				</tr>
+				<tr>
+				    <td>em</td>
+				    <td>100</td>
+				</tr>
+				<tr>
+				    <td>printoff</td>
+				    <td>100</td>
+				</tr>
+			</table>
 		</div>
 		<div class="main about">
 			About Us
 			<hr>
-			Are you looking to test your computer-using dexterity SKILLZ? You
-			came to the right place!!!! Get ready to show your mettle through
-			INTENSE clicking and typing GAMEZ and beat your nerd friends!!!!!!
-			fuck me
+			Are you looking to test your
+			computer-using dexterity skills? To
+			prove to a friend that you are better / faster
+			than them or just casualy work on improving 
+			your skills; then you came to the right place! 
+			We provide 2 tests, a typing test and a clicking test.
+			(more coming soon!) Enjoy! :) 
 		</div>
 	</div>
 

@@ -32,6 +32,14 @@ class DatabaseAdaptor
         return $statement->fetchAll(PDO::FETCH_ASSOC);
     }
     
+    public function createUser($un, $pw, $fname, $lname, $age)
+    {
+        $statement = $this->DB->prepare("SELECT * FROM users WHERE username = '" . $un
+            . "' AND password = '" . $pw . "'");
+        $statement->execute();
+        return $statement->fetchAll(PDO::FETCH_ASSOC);
+    }
+    
     public function getScores($id) {
         $statement = $this->DB->prepare("SELECT scores.clickscore, scores.typescore FROM scores " .
                                         "JOIN users ON scores.id = users.id " .

@@ -16,20 +16,24 @@ session_start();
 </head>
 <body>
 
-<script>
+	<script>
 
-function searchDatabase() {
+function submit() {
 	var username = document.getElementById("user").value;
-	document.getElementById("user").value = "";
-	
 
 	var password = document.getElementById("pass").value;
-	document.getElementById("pass").value = "";
+
+	var fname = document.getElementById("firstName").value;
+
+	var lname = document.getElementById("lastName").value;
+
+	var age = document.getElementById("age").value;
 
 	var ajax = new XMLHttpRequest();
 
 	// Send query parameter to controller.php
-	ajax.open("GET", "controller.php?username=" + username + "&password=" + password, true);
+	ajax.open("GET", "controller.php?mode=" + "signup" + "&username=" + username + "&password="
+			+ password + "&fname=" + fname + "&lname=" + lname + "&age=" + age, true);
 	ajax.send();
 
 	// Execute when server responds
@@ -55,33 +59,22 @@ function searchDatabase() {
 
 	<div class="maincontain">
 
-		<form action="profile.php" method="post">
-			<div class="main login_signup_header">
-				Sign Up<br>
-				<small>Or click <a href="login.html">here</a> to log in.
-				</small>
-			</div>
-			<div class="spacer"></div>
-			<div class="main signup_login">
-				Username<br> <input type="text" id="user" name="username"
-					required> <br> <br> Password<br> <input
-					type="text" id="pass" name="password" required> <br> <br>
-				First Name<br> <input type="text" id="firstName"
-					name="firstName" pattern="[A-Z a-z]*" required
-					autocomplete='given-name'> <br> <br> Last Name<br>
-				<input type="text" id="firstName" name="lastName"
-					pattern="[A-Z a-z]*" required autocomplete='given-name'> <br>
-				<br> Age<br> <input type="text" id="age" name="age"
-					pattern="[0-9]{1-2}" required> <br> <br> <input
-					class="buttontype" type="submit" name="signup" value="OK">
-					<?php
-                    if(isset($_SESSION ['registrationError'])) {
-                        echo $_SESSION ['registrationError'];
-                        unset($_SESSION ['registrationError']);
-                    }
-                    ?>
-			</div>
-		</form>
+
+		<div class="main login_signup_header">
+			Sign Up<br> <small>Or click <a href="login.html">here</a> to log in.
+			</small>
+		</div>
+		<div class="spacer"></div>
+		<div class="main signup_login">
+			Username<br> <input type="text" id="user" required> <br> <br>
+			Password<br> <input type="text" id="pass" required> <br> <br> First
+			Name<br> <input type="text" id="firstName" autocomplete='given-name'>
+			<br> <br> Last Name<br> <input type="text" id="lastName"
+				pattern="[A-Z a-z]*" required autocomplete='given-name'> <br> <br>
+			Age<br> <input type="text" id="age" required> <br> <br>
+			<button class="buttontype" onclick="submit();">OK</button>
+		</div>
+
 	</div>
 
 </body>

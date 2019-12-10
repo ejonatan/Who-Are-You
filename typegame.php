@@ -78,7 +78,7 @@
 
 		<p>Dexterity Test</p>
 
-		<button onclick="window.location.href = 'home.html'">Home</button>
+		<button onclick="window.location.href = 'home.php'">Home</button>
 
 	</div>
 

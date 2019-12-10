@@ -17,6 +17,23 @@ if (isset($_GET ['mode'])) {
     
     
     
+    $un = $_GET ['username'];
+    $pw = $_GET ['password'];
+    $fname = $_GET ['fname'];
+    $lname = $_GET ['lname'];
+    $age = $_GET ['age'];
+    
+    
+    
+    $_SESSION ['id'] = 100;
+    $_SESSION ['user'] = $un;
+    $_SESSION ['pass'] = $pw;
+    $_SESSION ['fname'] = $fname;
+    $_SESSION ['lname'] = $lname;
+    $_SESSION ['age'] = $age;
+    
+    print_r($_SESSION);
+    
 } else {
     
     $un = $_GET ['username'];
