@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <link href="styles.css" rel="stylesheet">
-<title>Who Are You? - Sign Up</title>
+<title>Dexterity Test - Sign Up</title>
 </head>
 <body>
 
@@ -13,7 +13,7 @@ session_start();
 
 	<div class="header">
 
-		<p>Who Are You?</p>
+		<p>Dexterity Test</p>
 
 		<button onclick="window.location.href = 'home.html'">Home</button>
 

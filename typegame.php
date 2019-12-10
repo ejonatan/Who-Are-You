@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <link href="styles.css" rel="stylesheet">
-<title>Who Are You? - Typing Game</title>
+<title>Dexterity Test - Typing Game</title>
 </head>
 <body>
 
@@ -71,7 +71,7 @@
 
 	<div class="header">
 
-		<p>Who Are You?</p>
+		<p>Dexterity Test</p>
 
 		<button onclick="window.location.href = 'home.html'">Home</button>
 
