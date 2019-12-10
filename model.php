@@ -1,6 +1,6 @@
 <!--  Authors: Emily Jonatan
                Pranav Talwar
-      File: mmodel.php
+      File: model.php
  -->
 
 <?php
@@ -12,7 +12,7 @@ class DatabaseAdaptor
 
     public function __construct()
     {
-        $dataBase = "mysql:dbname=imdb_small;charset=utf8;host=127.0.0.1";
+        $dataBase = "mysql:dbname=finalproject;charset=utf8;host=127.0.0.1";
         $user = 'root';
         $password = "";
         try {
@@ -24,40 +24,26 @@ class DatabaseAdaptor
         }
     }
 
-    public function getActors($input)
+    public function getUser($un, $pw)
     {
-        $statement = $this->DB->prepare("SELECT * FROM Actors WHERE first_name LIKE '%" . $input 
-                                        . "%' OR last_name LIKE '%" . $input . "%'");
+        $statement = $this->DB->prepare("SELECT * FROM users WHERE username = '" . $un 
+                                        . "' AND password = '" . $pw . "'");
         $statement->execute();
         return $statement->fetchAll(PDO::FETCH_ASSOC);
     }
-
-    public function getMovies($input)
-    {
-        $statement = $this->DB->prepare("SELECT * FROM Movies WHERE name LIKE '%" . $input . "%'");
-        $statement->execute();
-        return $statement->fetchAll(PDO::FETCH_ASSOC);
-    }
-
-//     public function getRoles($input)
-//     {
-//         $statement = $this->DB->prepare("SELECT * FROM Roles WHERE role LIKE '%" . $input . "%'");
-//         $statement->execute();
-//         return $statement->fetchAll(PDO::FETCH_ASSOC);
-//     }
     
-    public function getRoles($first_name, $last_name) {
-        $statement = $this->DB->prepare("SELECT Actors.first_name, Actors.last_name, Roles.role FROM Actors " .
-                                        "JOIN Roles ON Actors.id = Roles.actor_id " .
-                                        "WHERE Actors.first_name = '" . $first_name .
-                                        "' AND Actors.last_name = '" . $last_name . "'");
+    public function getScores($id) {
+        $statement = $this->DB->prepare("SELECT scores.clickscore, scores.typescore FROM scores " .
+                                        "JOIN users ON scores.id = users.id " .
+                                        "WHERE users.id = '" . $id . "'");
         $statement->execute();
         return $statement->fetchAll(PDO::FETCH_ASSOC);
     }
 }
 
-$theDBA = new DatabaseAdaptor ();
-$arr = $theDBA->getRoles ('Kevin', 'Bacon');
+$theDBA = new DatabaseAdaptor();
+$arr = $theDBA-> getUser('em', 'password123');
+$arr = $theDBA-> getScores(1);
 print_r ($arr);
 
 ?>
