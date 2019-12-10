@@ -15,16 +15,9 @@
 			countDiv = document.getElementById("countdown");
 			countDiv.classList.remove("destroy");
 			
-/* 			typeDiv = document.getElementById("type");
-			typeDiv.classList.remove("destroy"); */
-			
 			timer();
 
 		}
-		function cleanFile() {
-			
-		}
-		
 		
 		function timer() {
 			countDiv = document.getElementById("countdown");
@@ -66,8 +59,15 @@
 		</div>
 		<input class="inputdiv destroy" type= "text" id="type"/>
 		
-
 	</div>
-
+	
+    <?php
+    function gettingRandomWord() {
+        $arr = file("dictionary.txt");
+        $randomNumber = rand(0, size($arr));
+    }
+    ?>
+    
+    
 </body>
 </html>
