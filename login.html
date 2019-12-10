@@ -1,3 +1,8 @@
+<!--  Authors: Emily Jonatan
+			   Pranav Talwar
+      File: login.html
+ -->
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -6,6 +11,33 @@
 <title>Who Are You? - Log In</title>
 </head>
 <body>
+	<script>
+		function searchDatabase() {
+			var username = document.getElementById("user").value;
+			document.getElementById("user").value = "";
+			
+
+			var password = document.getElementById("pass").value;
+			document.getElementById("pass").value = "";
+
+			var ajax = new XMLHttpRequest();
+
+			// Send query parameter to controller.php
+			ajax.open("GET", "controller.php?username=" + username + "&password=" + password, true);
+			ajax.send();
+
+			// Execute when server responds
+			ajax.onreadystatechange = function() {
+				if (ajax.readyState == 4 && ajax.status == 200) {
+					var resultsDiv = document.getElementById("results");
+										
+					window.location.href = 'profile.php';
+					resultsDiv.innerHTML = ajax.responseText;
+				}
+			};
+		}
+		
+	</script>
 
 	<div class="header">
 
@@ -23,15 +55,13 @@
 			</small>
 		</div>
 		<div class="spacer"></div>
-		<form action="controller.php" method="post">
-			<div class="main signup_login">
-				Username<br> <input type="text" id="user" name="username"
-					required> <br> <br> Password<br> <input
-					type="text" id="pass" name="password" required> <br> <br>
-				<input class="buttontype" type="submit" value="OK">
-			</div>
-		</form>
-
+		<div class="main signup_login">
+			Username<br> <input type="text" id="user" name="username"
+				required> <br> <br> Password<br> <input
+				type="text" id="pass" name="password" required> <br> <br>
+			<button onclick="searchDatabase();" class="buttontype" type="submit">OK</button>
+		</div>
+		
 	</div>
 
 </body>

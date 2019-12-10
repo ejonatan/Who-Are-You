@@ -41,9 +41,4 @@ class DatabaseAdaptor
     }
 }
 
-$theDBA = new DatabaseAdaptor();
-$arr = $theDBA-> getUser('em', 'password123');
-$arr = $theDBA-> getScores(1);
-print_r ($arr);
-
 ?>
