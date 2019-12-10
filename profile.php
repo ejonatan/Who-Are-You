@@ -1,3 +1,6 @@
+<?php
+session_start();
+?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -20,15 +23,10 @@
 			<br> <img src="images/profilepic.png" width="100px" height="100px">
 
 			<?php
-			$username = $_POST["username"];
-			$password = $_POST["password"];
-            $firstName = $_POST["firstName"];
-            $lastName = $_POST["lastName"];
-            $age = $_POST["age"];
-            echo "<br>Username: " . $username;
-            echo "<br>Password: " . str_repeat("*", strlen($password));
-            echo "<br>Name: " . $firstName . " " . $lastName;
-            echo "<br>Age: " . $age;
+			echo "<br>Username: " . $_SESSION['user'];
+			echo "<br>Password: " . str_repeat("*", strlen($_SESSION['pass']));
+			echo "<br>Name: " . $_SESSION['fname'] . " " . $_SESSION['lname'];
+			echo "<br>Age: " . $_SESSION['age'];
             ?>
 		</div>
 		<div class="main stats">
