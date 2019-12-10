@@ -4,7 +4,7 @@ session_start();
 
 <!--  Authors: Emily Jonatan
 			   Pranav Talwar
-      File: profile.php
+      File: profile.php 
  -->
  
 <!DOCTYPE html>
