@@ -1,3 +1,8 @@
+<!--  Authors: Emily Jonatan
+			   Pranav Talwar
+      File: typegame.php
+ -->
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -90,7 +95,7 @@
 			<button onclick="startGame();">Start</button>
 			
 		</div>	
-		<div class="main destroy" id="word"></div>
+		<div class="wordDisplay destroy" id="word"></div>
 		<div class="clickgame destroy" id="countdown">
 		</div>
 		<input class="inputdiv destroy" type= "text" id="type" onchange="getRandomWord()"/>
