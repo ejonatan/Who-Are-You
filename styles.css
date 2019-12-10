@@ -206,6 +206,16 @@ button {
 	background-color: rgba(172, 6, 80, 0.75);	
 }
 
+.middle {
+	position: fixed; 
+	left: 40%;
+	top: 43%;
+	width: 20%;
+	font-size: 40px; 
+	color: #004080;
+	border: solid black 3px;
+}
+
 .clickgame p {
 	-webkit-user-select: none; /* Safari */        
 	-moz-user-select: none; /* Firefox */

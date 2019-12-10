@@ -12,11 +12,17 @@
 <body>
 
 	<script>
+	
+		var score = 0
+		
 		function startGame() {
 			promptDiv = document.getElementById("prompt");
 			promptDiv.classList.add("destroy");
 
 			countDiv = document.getElementById("countdown");
+			countDiv.classList.remove("destroy");
+			
+			countDiv = document.getElementById("butt");
 			countDiv.classList.remove("destroy");
 
 			timer();
@@ -31,10 +37,13 @@
 				timeleft -= 1;
 				if (timeleft < 0) {
 					clearInterval(downloadTimer);
-					countDiv.innerHTML = "Finished"
+					countDiv.innerHTML = "Finished! Score: " + score;
 				}
 			}, 1000);
+			
 		}
+
+
 	</script>
 
 	<div class="header">
@@ -52,8 +61,9 @@
 			pew pew 
 			<button onclick="startGame();">Start</button>
 		</div>
-
+		<button class="destroy middle" id="butt" onclick="score += 1;">CLICK ME</button>
 		<div class="clickgame destroy" id="countdown"></div>
+		
 
 	</div>
 

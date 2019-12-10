@@ -34,8 +34,7 @@ class DatabaseAdaptor
     
     public function createUser($un, $pw, $fname, $lname, $age)
     {
-        $statement = $this->DB->prepare("SELECT * FROM users WHERE username = '" . $un
-            . "' AND password = '" . $pw . "'");
+        $statement = $this->DB->prepare("INSERT into users values ('" . $un . "', '" . $pw . "', '" . $fname . "', '" . $lname . "'," . $age . ");");
         $statement->execute();
         return $statement->fetchAll(PDO::FETCH_ASSOC);
     }

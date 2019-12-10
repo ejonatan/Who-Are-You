@@ -34,7 +34,7 @@ function logOut() {
 		    echo '<button onclick="logOut();">Log Out</button>';
 		} else {
 		    echo '<button onclick="window.location.href = \'login.html\'">Log In</button>';
-		    echo '<button onclick="window.location.href = \'signup.html\'">Sign Up</button>';
+		    echo '<button onclick="window.location.href = \'signup.php\'">Sign Up</button>';
 		}
 		?>		
 
@@ -55,15 +55,18 @@ function logOut() {
 				<tr>
 				    <th>Username</th> 
 				    <th>Typing Score</th>
+				    <th>Clicking Score</th>
 				    
 				</tr>
 				<tr>
 				    <td>em</td>
-				    <td>100</td>
+				    <td>63</td>
+				    <td>78</td>
 				</tr>
 				<tr>
 				    <td>printoff</td>
-				    <td>100</td>
+				    <td>52</td>
+				    <td>69</td>
 				</tr>
 			</table>
 		</div>
